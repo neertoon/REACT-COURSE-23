@@ -1,11 +1,14 @@
+import { useState } from 'react';
+
 import { CORE_CONCEPTS } from './data.js';
 import Header from "./components/Header/Header";
 import CoreConcept from "./components/CoreConcept";
 import TabButton from "./components/TabButton";
 function App() {
-    let tabContent = "Please select a tab";
+    const [ selectedTopic, setSelectedTopic ] = useState("Please select a tab");
+
     function handleSelect(element) {
-        tabContent = element;
+        setSelectedTopic(element);
     }
 
     return (
@@ -34,7 +37,7 @@ function App() {
                     </menu>
                     <div className="tab-content">
                         <p>
-                            {tabContent}
+                            {selectedTopic}
                         </p>
                     </div>
                 </section>
