@@ -3,8 +3,9 @@ import Header from "./components/Header/Header";
 import CoreConcept from "./components/CoreConcept";
 import TabButton from "./components/TabButton";
 function App() {
+    let tabContent = "Please select a tab";
     function handleSelect(element) {
-        console.log(element);
+        tabContent = element;
     }
 
     return (
@@ -33,10 +34,7 @@ function App() {
                     </menu>
                     <div className="tab-content">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                            voluptates, voluptatum, quod, quae dolorum officia voluptatem
-                            accusantium quia voluptas quibusdam magnam. Quisquam, quibusdam
-                            voluptatem. Quisquam, quibusdam voluptatem.
+                            {tabContent}
                         </p>
                     </div>
                 </section>
